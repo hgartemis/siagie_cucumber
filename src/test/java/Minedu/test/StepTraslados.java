@@ -304,7 +304,7 @@ public class StepTraslados {
                 Runner.Driver.implicitwait();
 
                 String resul = stripAccents(Runner.Driver.returnDriver().switchTo().alert().getText());
-                String esperado = "¿Está seguro de matricular al estudiante?";
+                String esperado = stripAccents("¿Está seguro de matricular al estudiante?");
 
                 Runner.Driver.returnDriver().switchTo().alert().accept();
 
