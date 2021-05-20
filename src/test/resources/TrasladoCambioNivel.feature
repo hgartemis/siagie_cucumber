@@ -1,8 +1,7 @@
 @CambioNivel
 Feature: Gestion de Traslados por cambio de nivel
 
-  Scenario Outline: 01. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE, y deseo validar el mensaje cuando el codigo modular no es valido o menor a 7 digitos
+  Scenario Outline: 01. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE, y deseo validar el mensaje cuando el codigo modular no es valido o menor a 7 digitos
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -26,8 +25,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 1581581  | El código de IE Traslado no es válido o tiene asociado mas de un anexo. Utilice el boton buscador de Instituciones Educativas. |
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 158      | El codigo modular debe tener 7 digitos                                                                                         |
 
-  Scenario Outline: 02. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE, y deseo validar el mensaje cuando el traslado es de un dni invalido.
+  Scenario Outline: 02. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE, y deseo validar el mensaje cuando el traslado es de un dni invalido.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -52,9 +50,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0203729  | 2222     | El DNI del estudiante debe tener 8 digitos                                         |
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0203729  | 12345678 | No se ha encontrado al estudiante con el documento nacional de identidad ingresado |
 
-  Scenario Outline: 03. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE, y deseo validar el mensaje cuando el anio del ultimo año no es
-  el correcto.
+  Scenario Outline: 03. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE, y deseo validar el mensaje cuando el anio del ultimo año no es el correcto.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -81,9 +77,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0203729  | 62012517 | 2019   | La información ingresada no coincide con la última matrícula del estudiante |
 
 
-  Scenario Outline: 04. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE, y deseo validar el mensaje cuando el traslado es de un dni valido
-  y no seleccion el check de declaracion jurada.
+  Scenario Outline: 04. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE, y deseo validar el mensaje cuando el traslado es de un dni valido y no seleccion el check de declaracion jurada.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -110,9 +104,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0203729  | 62012517 | Debe declarar haber recibido la documentación del estudiante por parte del padre de familia y/o Representante Legal |
 
 
-  Scenario Outline: 05. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE, y deseo validar el mensaje cuando no selecciono ningun documento de
-  recepcion del alumno.
+  Scenario Outline: 05. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE, y deseo validar el mensaje cuando no selecciono ningun documento de recepcion del alumno.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -139,8 +131,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | usuario  | contrasena  | captcha | codigoModular | anioDestino | tipo traslado       | IEOrigen | dni      | mensaje                                                                                                                                                   |
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0203729  | 62012517 | Debe seleccionar por lo menos uno de los siguientes documentos: Copia de DNI, Ficha Única de Matrícula, Certificado de Estudios u Otro (CE, PAS, PN o DJ) |
 
-  Scenario Outline: 06. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE por el cambio de nivel usando datos validos con dni.
+  Scenario Outline: 06. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE por el cambio de nivel usando datos validos con dni.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -168,8 +159,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | usuario  | contrasena  | captcha | codigoModular | anioDestino | tipo traslado       | IEOrigen | dni      | mensaje                                                                                                                      |
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0207985  | 72992763 | Se ha realizado de forma satisfactoria el proceso de traslado del estudiante, el mismo que fue aprobado de manera automática |
 
-  Scenario Outline: 07. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE por el cambio de año usando datos validos de alumno ya registrado.
+  Scenario Outline: 07. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE por el cambio de año usando datos validos de alumno ya registrado.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -195,9 +185,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | usuario  | contrasena  | captcha | codigoModular | anioDestino | tipo traslado       | IEOrigen | codigo         | mensaje                                                             |
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0207985  | 12148599400240 | El estudiante cuenta con un proceso de traslado [ En el mismo año ] |
 
-  Scenario Outline: 08. Como usuario deseo ingresar a gestion de traslado donde
-  buscare el proceso de traslado y rechazar la constancia recepcionada
-  del alumno
+  Scenario Outline: 08. Como usuario deseo ingresar a gestion de traslado donde buscare el proceso de traslado y rechazar la constancia recepcionada del alumno
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -221,8 +209,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | Constancia recibida en origen | 12148599400240 | rechazo |
 
 
-  Scenario Outline: 09. Como usuario deseo ingresar y trasladar a un alumno
-  de diferentes IE por el cambio de nivel usando datos validos con codigo del alumno.
+  Scenario Outline: 09. Como usuario deseo ingresar y trasladar a un alumno de diferentes IE por el cambio de nivel usando datos validos con codigo del alumno.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -251,8 +238,7 @@ Feature: Gestion de Traslados por cambio de nivel
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de nivel | 0207985  | 12148599400240 | Se ha realizado de forma satisfactoria el proceso de traslado del estudiante, el mismo que fue aprobado de manera automática |
 
 
-  Scenario Outline: 10. Como usuario deseo ingresar a gestion de traslado donde
-  buscare el proceso de traslado y confirmar matricula de la constancia recepcionada.
+  Scenario Outline: 10. Como usuario deseo ingresar a gestion de traslado donde buscare el proceso de traslado y confirmar matricula de la constancia recepcionada.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
