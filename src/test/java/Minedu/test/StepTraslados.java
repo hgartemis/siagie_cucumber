@@ -16,7 +16,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Set;
 
+
 public class StepTraslados {
+
+    private static final String ORIGINAL            = "ÁáÉéÍíÓóÚúÑñÜü";
+    private static final String REPLACEMENT         = "AaEeIiOoUuNnUu";
 
     String mainWindow = null;
     Set<String> allwindows = null;
@@ -297,8 +301,15 @@ public class StepTraslados {
                 Runner.Driver.implicitwait();
                 tras.BtnAceptarPrevio();
 
-                //Runner.Driver.implicitwait();
-                //tras.BtnAceptarAprobar();
+                Runner.Driver.implicitwait();
+
+                String resul = stripAccents(Runner.Driver.returnDriver().switchTo().alert().getText());
+                String esperado = "¿Está seguro de matricular al estudiante?";
+
+                Runner.Driver.returnDriver().switchTo().alert().accept();
+
+                Assert.assertEquals(esperado, resul);
+                Runner.Driver.implicitwait();
 
                 break;
         }
@@ -307,4 +318,19 @@ public class StepTraslados {
 
     }
 
+    public static String stripAccents(String str) {
+        if (str == null) {
+            return null;
+        }
+        char[] array = str.toCharArray();
+        for (int index = 0; index < array.length; index++) {
+            int pos = ORIGINAL.indexOf(array[index]);
+            if (pos > -1) {
+                array[index] = REPLACEMENT.charAt(pos);
+            }
+        }
+        return new String(array);
+    }
+
 }
+

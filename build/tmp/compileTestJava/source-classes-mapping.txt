@@ -2,8 +2,6 @@ Minedu/test/MyStepdefs.java
  Minedu.test.MyStepdefs
 Minedu/test/Runner.java
  Minedu.test.Runner
-Minedu/test/StepPrueba.java
- Minedu.test.StepPrueba
 Minedu/test/StepLanding.java
  Minedu.test.StepLanding
 Minedu/test/StepPrincipal.java

@@ -250,8 +250,7 @@ Feature: Gestion de Traslados por cambio de año
       | usuario  | contrasena  | captcha | codigoModular | anioDestino | tipo traslado     | IEOrigen | codigo         | ultimo | mensaje                                                                                                                      |
       | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de año | 0207472  | 12027205400288 | 11     | Se ha realizado de forma satisfactoria el proceso de traslado del estudiante, el mismo que fue aprobado de manera automática |
 
-  Scenario Outline: 10. Como usuario deseo ingresar a gestion de traslado donde
-  buscare el proceso de traslado y confirmar matricula de la constancia recepcionada.
+  Scenario Outline: 10. Como usuario deseo ingresar a gestion de traslado donde buscare el proceso de traslado y confirmar matricula de la constancia recepcionada.
 
     Given el usuario ingresa a login siagie
     And  ingresar <usuario> en usuario en TextBox
@@ -272,5 +271,5 @@ Feature: Gestion de Traslados por cambio de año
     And valido el boton en solicitud y confirmo <estado> de la constancia
     Examples:
       | usuario  | contrasena  | captcha | codigoModular | anioDestino | tipo traslado     | estado constancia             | codigo         | estado    |
-      | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de año | Constancia recibida en origen | 12027205400288 | matricula |
+      | 19100733 | 2021Siagie@ | abc     | 0245647       | 2021        | Por cambio de año | Constancia recibida en origen | 10055619100700 | matricula |
 

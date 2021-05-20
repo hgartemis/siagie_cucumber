@@ -140,7 +140,7 @@ public class trasladopage {
     @FindBy(id = "ctl00_ContentPlaceMain_btnAprobar")
     WebElement btnAceptarAprobar;
 
-
+    //ctl00_ContentPlaceMain_UdpAprobar
 
 
     public trasladopage(driver driver) {
