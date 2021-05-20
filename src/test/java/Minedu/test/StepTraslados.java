@@ -271,12 +271,16 @@ public class StepTraslados {
     public void buscoElCodigoDelAlumnoEnElResultado(String codigo) {
 
         posicionEnTablaAlumno = tras.buscarCodigoAlumno(codigo);
-        //System.out.println("posicion: " + posicionEnTablaAlumno);
+        System.out.println("posición: " + posicionEnTablaAlumno);
+
         Runner.Driver.implicitwait();
     }
 
     @And("doy en el click en el boton de estado")
     public void doyEnElClickEnElBotonDeEstado() {
+
+        if (posicionEnTablaAlumno == "")
+            System.out.println("No se ubico el código del alumno. Revisar datos de pruebas.");
 
         tras.botonEstadoAlumno(posicionEnTablaAlumno).click();
         Runner.Driver.implicitwait();
