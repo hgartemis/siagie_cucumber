@@ -1,0 +1,29 @@
+pages/aaaa_demo_page.java
+ pages.aaaa_demo_page
+pages/trasladopage.java
+ pages.trasladopage
+utilities/responsive.java
+ utilities.responsive
+utilities/utilities.java
+ utilities.utilities
+ utilities.utilities$1
+pages/landingpage.java
+ pages.landingpage
+ControlSelenium/Control.java
+ ControlSelenium.Control
+driver/driver.java
+ driver.driver
+ControlSelenium/Button.java
+ ControlSelenium.Button
+ControlSelenium/TextBox.java
+ ControlSelenium.TextBox
+pages/siagieIniciopage.java
+ pages.siagieIniciopage
+pom/demo_pom.java
+ pom.demo_pom
+pom/landingPOM.java
+ pom.landingPOM
+ManageSiagie/LoginScreen.java
+ ManageSiagie.LoginScreen
+utilities/SqlServer.java
+ utilities.SqlServer

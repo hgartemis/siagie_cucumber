@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1.0) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Siagie Traslados</td>
+        <td>1.0</td>
+      <td>18 May 2021, 20:03</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">Minedu.test.MyStepdefs.ss()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.Runner.setUp()</td>
+              <td>43</td>
+              <td class="duration" data-value="10880860465">10.880</td>
+              <td class="duration" data-value="10880860465">13.906</td>
+              <td class="duration" data-value="467877000000">7:47.877</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.Runner.tearDown(io.cucumber.java.Scenario)</td>
+              <td>43</td>
+              <td class="duration" data-value="962511627">0.962</td>
+              <td class="duration" data-value="962511627">1.547</td>
+              <td class="duration" data-value="41388000000">41.388</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepLanding.elUsuarioSeEncuentraEnLaPaginaInicial()</td>
+              <td>6</td>
+              <td class="duration" data-value="2666666">0.002</td>
+              <td class="duration" data-value="2666666">0.015</td>
+              <td class="duration" data-value="16000000">0.016</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepLanding.entoncesValidaCadaUnoDeLosControles()</td>
+              <td>1</td>
+              <td class="duration" data-value="5004000000">5.004</td>
+              <td class="duration" data-value="5004000000">5.004</td>
+              <td class="duration" data-value="5004000000">5.004</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepLanding.escriboMiUsuarioEnTextboxUsuario(java.lang.String,java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="133916666">0.133</td>
+              <td class="duration" data-value="133916666">0.169</td>
+              <td class="duration" data-value="1607000000">1.607</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepLanding.seConfirmaLaExistenciaDeCadaUno()</td>
+              <td>1</td>
+              <td class="duration" data-value="813000000">0.813</td>
+              <td class="duration" data-value="813000000">0.813</td>
+              <td class="duration" data-value="813000000">0.813</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepLanding.seDeberiaMostrarMensajedevalidacion(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="15185000000">15.185</td>
+              <td class="duration" data-value="15185000000">15.194</td>
+              <td class="duration" data-value="60740000000">1:0.740</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepLanding.seDeberiaPoderIngresarALaAplicacion()</td>
+              <td>1</td>
+              <td class="duration" data-value="15339000000">15.339</td>
+              <td class="duration" data-value="15339000000">15.339</td>
+              <td class="duration" data-value="15339000000">15.339</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.daClickEnBotonIniciar()</td>
+              <td>2</td>
+              <td class="duration" data-value="15112500000">15.112</td>
+              <td class="duration" data-value="15112500000">15.120</td>
+              <td class="duration" data-value="30225000000">30.225</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.elTesterSeleccionaElBotonDeSeleccionDeIE()</td>
+              <td>2</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.elTesterSeleccionaenelMenuLaOpcionMatricula()</td>
+              <td>1</td>
+              <td class="duration" data-value="5087000000">5.087</td>
+              <td class="duration" data-value="5087000000">5.087</td>
+              <td class="duration" data-value="5087000000">5.087</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.escribeElCodigoModularEnTextboxCodMod(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="5890500000">5.890</td>
+              <td class="duration" data-value="5890500000">6.109</td>
+              <td class="duration" data-value="11781000000">11.781</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.finalmenteSeValidaEnFormularioPrincipalElIESeleccionada(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="6090000000">6.090</td>
+              <td class="duration" data-value="6090000000">6.090</td>
+              <td class="duration" data-value="6090000000">6.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.finalmenteValidaSiSeEncuentraEnElFormulario()</td>
+              <td>1</td>
+              <td class="duration" data-value="5211000000">5.211</td>
+              <td class="duration" data-value="5211000000">5.211</td>
+              <td class="duration" data-value="5211000000">5.211</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.ingresaSuUsuarioEnTextboxUsuario(java.lang.String,java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="157666666">0.157</td>
+              <td class="duration" data-value="157666666">0.250</td>
+              <td class="duration" data-value="946000000">0.946</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.seDirigealaOpcionTrasladoySeguidamenteIngreso()</td>
+              <td>1</td>
+              <td class="duration" data-value="5295000000">5.295</td>
+              <td class="duration" data-value="5295000000">5.295</td>
+              <td class="duration" data-value="5295000000">5.295</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepPrincipal.ySeleccionaElResultadoDeLaBusqueda()</td>
+              <td>2</td>
+              <td class="duration" data-value="10182000000">10.182</td>
+              <td class="duration" data-value="10182000000">10.192</td>
+              <td class="duration" data-value="20364000000">20.364</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.buscoElCodigoDelAlumnoEnElResultado(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="5212400000">5.212</td>
+              <td class="duration" data-value="5212400000">5.573</td>
+              <td class="duration" data-value="26062000000">26.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.doyClickEnBotonBuscar()</td>
+              <td>30</td>
+              <td class="duration" data-value="5087333333">5.087</td>
+              <td class="duration" data-value="5087333333">5.102</td>
+              <td class="duration" data-value="152620000000">2:32.620</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.doyClickEnBotonProceder()</td>
+              <td>30</td>
+              <td class="duration" data-value="5096633333">5.096</td>
+              <td class="duration" data-value="5096633333">5.126</td>
+              <td class="duration" data-value="152899000000">2:32.899</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.doyClickEnBotonValidar()</td>
+              <td>17</td>
+              <td class="duration" data-value="5089764705">5.089</td>
+              <td class="duration" data-value="5089764705">5.110</td>
+              <td class="duration" data-value="86526000000">1:26.526</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.doyClickEnBuscarConstanciaDeTraslado()</td>
+              <td>5</td>
+              <td class="duration" data-value="5083000000">5.083</td>
+              <td class="duration" data-value="5083000000">5.099</td>
+              <td class="duration" data-value="25415000000">25.415</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.doyClickenAlgunosDocumentosDelEstudiante()</td>
+              <td>6</td>
+              <td class="duration" data-value="164666666">0.164</td>
+              <td class="duration" data-value="164666666">0.168</td>
+              <td class="duration" data-value="988000000">0.988</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.doyEnElClickEnElBotonDeEstado()</td>
+              <td>5</td>
+              <td class="duration" data-value="4121600000">4.121</td>
+              <td class="duration" data-value="4121600000">5.152</td>
+              <td class="duration" data-value="20608000000">20.608</td>
+              <td class="failed">80.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.elTesterSeleccionaenelMenuLaOpcionMatricula()</td>
+              <td>35</td>
+              <td class="duration" data-value="5093571428">5.093</td>
+              <td class="duration" data-value="5093571428">5.154</td>
+              <td class="duration" data-value="178275000000">2:58.275</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.elUsuarioIngresaASiagie()</td>
+              <td>35</td>
+              <td class="duration" data-value="28571">0.000</td>
+              <td class="duration" data-value="28571">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.enDeclaracionJuradaLeDoyCheckDeRecepcion()</td>
+              <td>9</td>
+              <td class="duration" data-value="217777777">0.217</td>
+              <td class="duration" data-value="217777777">1.109</td>
+              <td class="duration" data-value="1960000000">1.960</td>
+              <td class="failed">88.89%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.enElFormularioDeGestionDeTrasladoSeleccionaAnioDestino(java.lang.String)</td>
+              <td>35</td>
+              <td class="duration" data-value="10226914285">10.226</td>
+              <td class="duration" data-value="10226914285">10.383</td>
+              <td class="duration" data-value="357942000000">5:57.942</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.escribeElCodigoModularEnTextboxCodMod(java.lang.String,java.lang.String)</td>
+              <td>35</td>
+              <td class="duration" data-value="5263371428">5.263</td>
+              <td class="duration" data-value="5263371428">5.643</td>
+              <td class="duration" data-value="184218000000">3:4.218</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.finalmenteValidoSiElMensajeEsMensaje(java.lang.String)</td>
+              <td>24</td>
+              <td class="duration" data-value="7615541666">7.615</td>
+              <td class="duration" data-value="7615541666">1:5.081</td>
+              <td class="duration" data-value="182773000000">3:2.773</td>
+              <td class="failed">91.67%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.finalmenteValidoSiLaAlertaEsMensaje(java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="3412000000">3.412</td>
+              <td class="duration" data-value="3412000000">5.120</td>
+              <td class="duration" data-value="20472000000">20.472</td>
+              <td class="failed">66.67%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.haceClickEnEnBoton()</td>
+              <td>35</td>
+              <td class="duration" data-value="15114800000">15.114</td>
+              <td class="duration" data-value="15114800000">15.221</td>
+              <td class="duration" data-value="529018000000">8:49.018</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.hacerClickenBotonCambiarIE()</td>
+              <td>35</td>
+              <td class="duration" data-value="5525857142">5.525</td>
+              <td class="duration" data-value="5525857142">5.990</td>
+              <td class="duration" data-value="193405000000">3:13.405</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.ingresarUsuarioEnEnTextBox(java.lang.String,java.lang.String)</td>
+              <td>105</td>
+              <td class="duration" data-value="155361904">0.155</td>
+              <td class="duration" data-value="155361904">0.405</td>
+              <td class="duration" data-value="16313000000">16.313</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.ingresoElDocDelAlumnoEnElTextbox(java.lang.String,java.lang.String)</td>
+              <td>24</td>
+              <td class="duration" data-value="5353083333">5.353</td>
+              <td class="duration" data-value="5353083333">5.688</td>
+              <td class="duration" data-value="128474000000">2:8.474</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.ingresoElUltimoAnioDeEstudio(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="174000000">0.174</td>
+              <td class="duration" data-value="174000000">0.174</td>
+              <td class="duration" data-value="174000000">0.174</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.ingresoElUltimoGradoDeEstudio(java.lang.String)</td>
+              <td>12</td>
+              <td class="duration" data-value="184916666">0.184</td>
+              <td class="duration" data-value="184916666">0.217</td>
+              <td class="duration" data-value="2219000000">2.219</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.ingresoLaResolucionDeTraslado(java.lang.String)</td>
+              <td>4</td>
+              <td class="duration" data-value="80750000">0.080</td>
+              <td class="duration" data-value="80750000">0.091</td>
+              <td class="duration" data-value="323000000">0.323</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.leDoyClickEnGrabarYProcederConElTraslado()</td>
+              <td>12</td>
+              <td class="duration" data-value="168916666">0.168</td>
+              <td class="duration" data-value="168916666">1.203</td>
+              <td class="duration" data-value="2027000000">2.027</td>
+              <td class="failed">83.33%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.registroLaFechaActualDeTraslado()</td>
+              <td>4</td>
+              <td class="duration" data-value="187250000">0.187</td>
+              <td class="duration" data-value="187250000">0.196</td>
+              <td class="duration" data-value="749000000">0.749</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.seDirigealaOpcionTrasladoySeguidamenteIngreso()</td>
+              <td>35</td>
+              <td class="duration" data-value="5323000000">5.323</td>
+              <td class="duration" data-value="5323000000">5.361</td>
+              <td class="duration" data-value="186305000000">3:6.305</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.seleccionaElBotonAgregar()</td>
+              <td>30</td>
+              <td class="duration" data-value="5091066666">5.091</td>
+              <td class="duration" data-value="5091066666">5.141</td>
+              <td class="duration" data-value="152732000000">2:32.732</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.seleccionaElCheckDeAceptoLasCondiciciones()</td>
+              <td>30</td>
+              <td class="duration" data-value="78600000">0.078</td>
+              <td class="duration" data-value="78600000">0.206</td>
+              <td class="duration" data-value="2358000000">2.358</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.seleccionoTipoTraslado(java.lang.String,java.lang.String)</td>
+              <td>10</td>
+              <td class="duration" data-value="180900000">0.180</td>
+              <td class="duration" data-value="180900000">0.215</td>
+              <td class="duration" data-value="1809000000">1.809</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.seleccionoTipoTrasladoIngresoElIEOrigenEnTextbox(java.lang.String,java.lang.String)</td>
+              <td>30</td>
+              <td class="duration" data-value="5272200000">5.272</td>
+              <td class="duration" data-value="5272200000">5.483</td>
+              <td class="duration" data-value="158166000000">2:38.166</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.validoElBotonRechazoEnSolicitudYConfirmoEstadoDeLaConstancia(java.lang.String)</td>
+              <td>5</td>
+              <td class="duration" data-value="6191200000">6.191</td>
+              <td class="duration" data-value="6191200000">15.403</td>
+              <td class="duration" data-value="30956000000">30.956</td>
+              <td class="failed">80.00%</td>
+            </tr>
+            <tr>
+              <td class="location">Minedu.test.StepTraslados.ySeleccionaElResultadoDeLaBusqueda()</td>
+              <td>35</td>
+              <td class="duration" data-value="10181771428">10.181</td>
+              <td class="duration" data-value="10181771428">10.262</td>
+              <td class="duration" data-value="356362000000">5:56.362</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>48</td>
+            <td>814</td>
+            <td class="duration">4.705</td>
+            <td class="duration">8:49.018</td>
+            <td class="duration">1:3:49.932</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
